@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Courgette&family=Farro:wght@300;400&family=Lobster+Two&family=Meie+Script&family=Mochiy+Pop+P+One&family=Mrs+Sheppards&family=Oswald&family=Oxygen&family=PT+Sans&family=Poppins:wght@300;500;600;800&family=Rancho&family=Roboto:wght@300;400&family=Rubik:wght@300;500&family=Source+Sans+Pro&family=Supermercado+One&family=Teko:wght@500&family=Waterfall&family=Work+Sans:wght@400;500&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
-    
+
 }
 
-:root{
-    --heading:rgb(0 10 45);
-    --para:#777;
+:root {
+    --heading: rgb(0 10 45);
+    --para: #777;
     --para-tint: #e4e4e4;
     --white: #fff;
     --black: #212529;
@@ -21,46 +21,50 @@
     --bg: rgb(249 249 255);
     --icons-bg: rgba(144, 172, 209, 0.2);
     --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
-    --gradientSupport: -webkit-linear-gradient(
-      0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%
-    );
+    --gradientSupport: -webkit-linear-gradient(0deg,
+            rgb(132 144 255) 0%,
+            rgb(98 189 252) 100%);
     --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
     --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-h1,h2,h3,h4,h5{
-    font-family: 'Poppins', sans-serif;;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Poppins', sans-serif;
+    ;
 }
 
-h1{
+h1 {
     color: var(--heading);
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 600;
 }
-h3{
-  
+
+h3 {
+
     font-size: 1.8rem;
     font-weight: 400;
 }
 
-p{
+p {
     color: var(--para);
     line-height: 1.6;
     font-size: 1.7rem;
 }
 
-a{
+a {
     text-decoration: none;
 
 }
 
-li{
+li {
     list-style: none;
 }
 
@@ -68,7 +72,7 @@ li{
 =============Header section================
 =========================================== */
 
-.header{
+.header {
     padding: 0 4.8rem;
     display: flex;
     justify-content: space-between;
@@ -77,28 +81,171 @@ li{
     background-color: var(--bg);
 }
 
-.header .logo{
+.header .logo {
     height: 3rem;
 }
 
-.navbar-list{
+.navbar-list {
     display: flex;
     gap: 4.8rem;
 }
 
 .navbar-link:link,
-.navbar-link:visited{
+.navbar-link:visited {
     display: inline-block;
     font-size: 1.6rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--para);
     transition: all 1s linear;
-   
+
 }
 
 .navbar-link:hover,
-.navbar-link:active{
+.navbar-link:active {
     color: var(--helper);
     letter-spacing: 0.1rem;
+}
+
+
+/* ===========================================
+=============reusable code================
+=========================================== */
+.section {
+    padding: 9rem 0;
+}
+
+.container {
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 9rem;
+
+}
+
+.grid-two-column {
+    grid-template-columns: repeat(2, 1fr);
+
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.btn {
+    background: var(--gradientSupport);
+    padding: 1.6rem 3.5rem;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--helper-tint);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.btn:hover,
+.btn:active {
+    box-shadow: var(--shadowSupport);
+    letter-spacing: 0.5rem;
+}
+
+
+.common-heading {
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 6rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.common-heading::before {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 1.5rem;
+    border-radius: 50%;
+    height: 1.5rem;
+    background-color: green
+}
+
+.common-heading::after {
+    content: "";
+    position: absolute;
+    top: 118%;
+    left: 1.4rem;
+    width: 20rem;
+    height: .3rem;
+    background-color: var(--helper);
+    z-index: -1;
+}
+
+
+
+
+/* ===========================================
+=============Hero Section================
+=========================================== */
+
+.section-hero {
+    background-color: var(--bg);
+}
+
+.section-hero-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-top-data {
+    text-transform: uppercase;
+    color: var(--helper);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.hero-heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 6.4rem;
+}
+
+.hero-para {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    max-width: 60rem;
+}
+
+.hero-section-image {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+}
+
+.hero-img {
+    max-width: 80%;
+    box-shadow: var(--shadowSupport);
+}
+
+
+
+/* ===========================================
+=============Bio Data Section================
+=========================================== */
+
+.bio-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.bio-image img {
+    max-width: 80%;
+    box-shadow: -2rem -2rem 0 0 var(--helper);
+
 }
