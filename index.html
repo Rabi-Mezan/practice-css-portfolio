@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <title>Rabi dev</title>
 </head>
 
@@ -73,34 +75,33 @@ bio data Section
 
                 <h2 class="common-heading">My Bio Data</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente maiores temporibus odio unde
-                    eos sit, dignissimos deserunt. Perferendis, itaque quis. Rerum facere, distinctio aut sequi
-                    reiciendis expedita voluptatem saepe.</p>
+                    eos sit, dignissimos deserunt. Perferendis, itaque quis.</p>
                 <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, amet.</p>
 
                 <div class="bio-data-stats">
                     <div class="bio-stats">
                         <h3>Design</h3>
-                        <div class="bio-progress-bar progress-bar-1">
+                        <div class="bio-progress-bar ">
                             <span>80%</span>
                         </div>
                     </div>
                     <div class="bio-stats">
                         <h3>HTML</h3>
                         <div class="bio-progress-bar bio-progress-2">
-                            <span>99%</span>
+                            <span>95%</span>
                         </div>
                     </div>
                     <div class="bio-stats">
                         <h3>CSS</h3>
                         <div class="bio-progress-bar bio-progress-3">
-                            <span>90%</span>
+                            <span>85%</span>
                         </div>
                     </div>
                     <div class="bio-stats">
                         <h3>JavaScript</h3>
                         <div class="bio-progress-bar bio-progress-4">
-                            <span>85%</span>
+                            <span>80%</span>
                         </div>
                     </div>
                     <div class="bio-stats">
@@ -110,10 +111,156 @@ bio data Section
                         </div>
                     </div>
                 </div>
+                <div>
+                    <a class="btn" href="#">Download CV</a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- 
+=====================================
+Portfolio Section 
+===================================== -->
+    <section class="section section-portfolio ">
+        <div class="container">
+
+            <h2 class="common-heading">My Latest Works</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus sed consectetur consequatur,
+                iusto
+                minima deleniti.</p>
+        </div>
+
+        <div class="p-btns">
+            <div class="btn p-btn" data-btn-num="1">Website</div>
+            <div class="btn p-btn" data-btn-num="2">Youtube</div>
+            <div class="btn p-btn" data-btn-num="3">Design</div>
+        </div>
+        <div class="container grid grid-three-column portfolio-images">
+            <div class="img-overlay p-btn--1">
+                <img src="images/images/folio/1.jpg" alt="">
+                <div class="overlay">
+                    <a href="#" class="common-heading">Project-1</a>
+                </div>
+            </div>
+
+            <div class="img-overlay p-btn--2">
+                <img src="images/images/folio/4.jpg" alt="">
+                <div class="overlay">
+                    <a href="#" class="common-heading">Project-2</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--1 p-btn--2">
+                <img src="images/images/folio/3.jpg" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 3</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--1 p-btn--3">
+                <img src="images/images/folio/4.jpg" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 4</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--2">
+                <img src="images/images/folio/5.jpg" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 5</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--1  p-btn--3">
+                <img src="images/images/folio/1.jpg" alt="portfolio images " />
+                <div class="overlay">
+                    <a href="" target="_blank" class="common-heading">Project 6</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- 
+=====================================
+Statistics Section 
+===================================== -->
+
+    <section class="section-work-data section">
+        <div class="container grid grid-four-column">
+            <div>
+                <h2 class="counter-numbers">
+                    6000 <sup>+</sup>
+                </h2>
+                <p>Projects Completed</p>
+            </div>
+            <div>
+                <h2 class="counter-numbers">
+                    3000<sup>+</sup>
+                </h2>
+                <p>Projects Completed</p>
+            </div>
+            <div>
+                <h2 class="counter-numbers">
+                    4000<sup>+</sup>
+                </h2>
+                <p>Projects Completed</p>
+            </div>
+            <div>
+                <h2 class="counter-numbers">
+                    2000<sup>+</sup>
+                </h2>
+                <p>Projects Completed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+=====================================
+Testimonial Section 
+===================================== -->
+    <section class="section-testimoials section">
+        <div class="container">
+            <h2 class="common-heading">My Latest Works</h2>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/images/hero.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
 
 </body>
 

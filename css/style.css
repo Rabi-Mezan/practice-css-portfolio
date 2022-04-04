@@ -56,7 +56,8 @@ h3 {
 p {
     color: var(--para);
     line-height: 1.6;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    text-align: justify;
 }
 
 a {
@@ -83,6 +84,8 @@ li {
 
 .header .logo {
     height: 3rem;
+    display: hidden;
+    opacity: 0;
 }
 
 .navbar-list {
@@ -129,7 +132,17 @@ li {
 .grid-two-column {
     grid-template-columns: repeat(2, 1fr);
 
-    /* grid-template-columns: 1fr 1fr; */
+}
+
+.grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+
+}
+
+.grid-four-column {
+    grid-template-columns: repeat(4, 1fr);
+
 }
 
 .btn {
@@ -168,7 +181,7 @@ li {
     width: 1.5rem;
     border-radius: 50%;
     height: 1.5rem;
-    background-color: green
+    background-color: var(--helper);
 }
 
 .common-heading::after {
@@ -179,7 +192,7 @@ li {
     width: 20rem;
     height: .3rem;
     background-color: var(--helper);
-    z-index: -1;
+
 }
 
 
@@ -247,5 +260,229 @@ li {
 .bio-image img {
     max-width: 80%;
     box-shadow: -2rem -2rem 0 0 var(--helper);
+    border-right: .3rem solid var(--black);
+    padding: .5rem;
+    border-bottom: .3rem solid var(--black);
 
+}
+
+.bio-data-stats {
+    padding: 6.4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.bio-stats h3 {
+    margin-bottom: 1rem;
+}
+
+
+.bio-progress-bar {
+    width: 90%;
+    height: 0.6rem;
+    background-color: var(--para-tint);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+
+}
+
+.bio-progress-bar::before {
+    content: "";
+    width: 80%;
+    height: 0.6rem;
+    border-radius: 10rem;
+    background: var(--gradientSupport);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bio-progress-2::before {
+    width: 95%;
+}
+
+.bio-progress-3::before {
+    width: 85%;
+}
+
+.bio-progress-4::before {
+    width: 80%;
+}
+
+.bio-progress-5::before {
+    width: 70%;
+}
+
+.bio-progress-bar span {
+    position: absolute;
+    top: 1.5rem;
+    left: 76%;
+    width: 4rem;
+    height: 2rem;
+    background-color: var(--helper);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    font-weight: 500;
+}
+
+
+.bio-progress-2 span {
+    left: 91%;
+}
+
+.bio-progress-3 span {
+    left: 81%;
+}
+
+.bio-progress-4 span {
+    left: 76%;
+}
+
+.bio-progress-5 span {
+    left: 64%;
+}
+
+.bio-progress-bar span::after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -1.6rem;
+    border: 0.8rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+
+
+
+}
+
+/* ===========================================
+=============Portfolio Section================
+=========================================== */
+
+.section-portfolio {
+    background-color: var(--bg);
+    transition: all 0.3s linear;
+}
+
+.section-portfolio p {
+    max-width: 60rem;
+}
+
+.p-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 8rem 0;
+}
+
+.img-overlay img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: .5rem;
+
+
+}
+
+.img-overlay {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.img-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--gradientSupport);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+
+}
+
+.img-overlay:hover .overlay {
+    opacity: 0.7;
+    transform: translateX(0);
+}
+
+.overlay .common-heading {
+    text-decoration: none;
+    color: var(--black);
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.p-image-not-active {
+    display: none;
+}
+
+/* ===========================================
+=============statistics Section================
+=========================================== */
+
+.section-work-data {
+    background: var(--gradientSupport);
+    text-align: center;
+    color: var(--white);
+}
+
+.counter-numbers {
+    font-size: 4.5rem;
+}
+
+.section-work-data p {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: var(--white);
+}
+
+/* ===========================================
+=============testimonials Section================
+=========================================== */
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
